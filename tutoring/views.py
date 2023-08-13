@@ -28,6 +28,9 @@ def user_logout(request):
     logout(request)
     return redirect('/')
 
+def book_now(request):
+    return render(request,  'tutoring/book_now.html', { 'user': request.user })
+
 def tutoring_index(request):
     return render(request, 'tutoring/landing.html', { 'user': request.user })
 
