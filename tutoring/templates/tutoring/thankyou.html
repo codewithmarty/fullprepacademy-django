@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Prep Academy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/thankyou_style.css' %}">
+</head>
+<body>
+
+  {% include '../partials/header.html' %}
+
+  <div class="thank-you-container">
+    <div class="thank-you-message">
+        Thank you for sending your inquiry!
+        <br>
+        We'll get back to you as soon as we can.
+    </div>
+    <a class="contact-link" href="{% url 'contact' %}">Go back to Contact</a>
+  </div>
+
+  {% include '../partials/footer.html' %}
+
+</body>
+</html>
