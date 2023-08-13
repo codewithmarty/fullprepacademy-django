@@ -6,7 +6,11 @@
           <li><a class="collapsible" href="/services">Services</a></li>
           <li><a class="collapsible" href="/about">About Us</a></li>
           <li><a class="collapsible" href="/contact">Contact</a></li>
-          <li><a class="collapsible" href="/register">Register</a></li>
+          {% if user.is_authenticated %}
+            <li><a class="collapsible" href="/logout">Logout</a></li>
+          {% else %}
+            <li><a class="collapsible" href="/signup">Register</a></li>
+          {% endif %}
           <li class="collapse-trigger"><a href="#">☰</a></li>
       </ul>
   </nav>
@@ -14,7 +18,11 @@
       <li><a href="/services">Services</a></li>
       <li><a href="/about">About Us</a></li>
       <li><a href="/contact">Contact</a></li>
-      <li><a href="#">Register</a></li>
+      {% if user.is_authenticated %}
+        <li><a href="/logout">Logout</a></li>
+      {% else %}
+        <li><a href="/signup">Register</a></li>
+      {% endif %}
     </ul>
   </div>
 </header>

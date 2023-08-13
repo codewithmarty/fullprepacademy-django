@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Prep Academy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth_style.css' %}">
+</head>
+<body>
+
+  {% include '../partials/header.html' %}
+  <h2>Sign Up</h2>
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="{{ form.username.id_for_label }}">Username:</label>
+        {{ form.username }}
+        <span class="helptext">
+            {% if form.username.errors %}
+                {{ form.username.errors|join:", " }}
+            {% else %}
+                {{ form.username.help_text }}
+            {% endif %}
+        </span>
+    </div>
+    <div class="form-group">
+        <label for="{{ form.password1.id_for_label }}">Password:</label>
+        {{ form.password1 }}
+        <span class="helptext">
+            {% if form.password1.errors %}
+                {{ form.password1.errors|join:", " }}
+            {% else %}
+                {{ form.password1.help_text }}
+            {% endif %}
+        </span>
+    </div>
+    <div class="form-group">
+        <label for="{{ form.password2.id_for_label }}">Confirm Password:</label>
+        {{ form.password2 }}
+        <span class="helptext">
+            {% if form.password2.errors %}
+                {{ form.password2.errors|join:", " }}
+            {% else %}
+                {{ form.password2.help_text }}
+            {% endif %}
+        </span>
+    </div>
+    <button class="form-submit" type="submit">Sign Up</button>
+    <p>Already have an account? <a href="/login">Login</a></p>
+  </form>
+  
+
+  {% include '../partials/footer.html' %}
+
+</body>
+</html>

@@ -80,8 +80,9 @@ WSGI_APPLICATION = 'fullprep.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'fullprep',
+        'ENFORCE_SCHEMA': False,
     }
 }
 

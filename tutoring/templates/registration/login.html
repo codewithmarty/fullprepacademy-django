@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Prep Academy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth_style.css' %}">
+</head>
+<body>
+
+  {% include '../partials/header.html' %}
+  <h2>Login</h2>
+  <form method="post">
+      {% csrf_token %}
+      <div class="form-group">
+          <label for="{{ form.username.id_for_label }}">Username:</label>
+          {{ form.username }}
+      </div>
+      <div class="form-group">
+          <label for="{{ form.password.id_for_label }}">Password:</label>
+          {{ form.password }}
+      </div>
+      <button class="form-submit" type="submit">Login</button>
+    <p>Need an account? <a href="/signup">Register</a></p>
+  </form>
+  
+  {% include '../partials/footer.html' %}
+
+</body>
+</html>
