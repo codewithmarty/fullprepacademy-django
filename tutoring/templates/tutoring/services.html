@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Prep Academy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/services_style.css' %}">
+</head>
+<body>
+
+  {% include '../partials/header.html' %}
+
+  <section class="services">
+    <h2>Our Tutoring Services</h2>
+    <div>
+      <div class="service">
+          <img src="{% static 'images/math.png' %}" alt="Subject Icon">
+          <h3>Math Grade 7 - 12</h3>
+          <p>We offer tutoring in all math subject areas.</p>
+      </div>
+      <div class="service">
+          <img src="{% static 'images/physics.png' %}" alt="Tutors Icon">
+          <h3>Physics Grade 11 - 12</h3>
+          <p>We cover university prep level physics.</p>
+      </div>
+      <div class="service">
+          <img src="{% static 'images/coding.png' %}" alt="Flexible Icon">
+          <h3>Coding</h3>
+          <p>We cover full stack development and algorithms covered in bootcamps and beyond.</p>
+      </div>
+    </div>
+    <h2>Book a FREE Session</h2>
+    <a href="/contact" class="cta-button contact-btn">Contact</a>
+  </section>
+
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <div>
+      <div class="testimonial">
+          <img src="{% static 'images/5star.png' %}" alt="Subject Icon">
+          <h3>Joanna</h3>
+          <p>Full Prep helped my son tremendously to find his footing in high school Math.</p>
+      </div>
+      <div class="testimonial">
+        <img src="{% static 'images/5star.png' %}" alt="Subject Icon">
+        <h3>Tyler</h3>
+          <p>I don't know where I'd be without Full Prep. The tutors helped me greatly.</p>
+      </div>
+      <div class="testimonial">
+        <img src="{% static 'images/5star.png' %}" alt="Subject Icon">
+        <h3>Zarin</h3>
+          <p>Probably the best tutor I've ever had!</p>
+      </div>
+    </div>
+  </section>
+
+  {% include '../partials/footer.html' %}
+
+</body>
+</html>

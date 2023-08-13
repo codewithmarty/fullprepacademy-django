@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Prep Academy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact_style.css' %}">
+</head>
+<body>
+
+  {% include '../partials/header.html' %}
+
+  <section class="contact">
+    <h2>Contact Our Team</h2>
+    <p>If you have any questions or would like to get started, feel free to reach out to us:</p>
+    <p>If you're new to Full Prep, you can also book a <strong>FREE</strong> session using the contact form below.</p>
+    <p>If you'd like a free session, mention it in the message.</p>
+
+    
+    <form class="contact-form">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  {% include '../partials/footer.html' %}
+
+</body>
+</html>

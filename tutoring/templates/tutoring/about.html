@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Prep Academy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about_style.css' %}">
+</head>
+<body>
+
+  {% include '../partials/header.html' %}
+
+    <section class="about-us">
+      <h2>About Us</h2>
+      <p>Full Prep Academy is a dynamic and innovative educational institution dedicated to empowering students with the tools they need to excel academically and beyond. With a strong commitment to fostering personalized learning experiences, Full Prep Academy offers a diverse range of comprehensive tutoring services that cater to students of all ages and learning levels.</p>
+      <p>At Full Prep Academy, we understand that every student's journey is unique, and our approach reflects this understanding. Our team of highly qualified educators and mentors are passionate about guiding students on their path to success. Whether it's mastering complex subjects, preparing for standardized tests, or developing crucial study skills, we provide tailored solutions that meet each student's specific goals and challenges.</p>
+      <p>With a student-centered philosophy, Full Prep Academy goes beyond traditional tutoring by creating an environment that encourages curiosity, critical thinking, and growth. Our interactive and engaging teaching methods ensure that students not only grasp the material but also develop a genuine enthusiasm for learning. Through one-on-one sessions, small group classes, and cutting-edge educational resources, we empower students to unlock their full potential.</p>
+      <p>Full Prep Academy is more than just an educational institution; it's a supportive community that fosters a love for learning and achievement. We believe that education is a lifelong journey, and our mission is to equip our students with the skills and confidence to navigate that journey successfully. Join us at Full Prep Academy and embark on a transformative educational experience that will shape your future for years to come.</p>
+    </section>
+
+    {% include '../partials/footer.html' %}
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Prep Academy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% include '../partials/header.html' %}
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Full Prep Academy</h1>
+            <a href="/services" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    {% include '../partials/footer.html' %}
+</body>
+</html>
