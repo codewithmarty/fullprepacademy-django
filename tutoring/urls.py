@@ -5,7 +5,7 @@ urlpatterns = [
     path('', tutoring_index),
     path('about/', tutoring_about),
     path('contact/', tutoring_contact, name='contact'),
-    path('services/', tutoring_services),
+    path('tutoring/', tutoring_services),
     path('booking/', book_now),
     path('contact_submit/', contact_form_submission, name='contact_submit'),
     path('thankyou/', email_confirmation, name='email_confirmation'),

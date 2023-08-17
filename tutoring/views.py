@@ -73,4 +73,4 @@ def tutoring_contact(request):
     return render(request, 'tutoring/contact.html', { 'user': request.user })
 
 def tutoring_services(request):
-    return render(request, 'tutoring/services.html', { 'user': request.user })
+    return render(request, 'tutoring/tutoring.html', { 'user': request.user })
