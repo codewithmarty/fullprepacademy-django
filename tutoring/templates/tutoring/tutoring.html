@@ -20,17 +20,20 @@
       <div class="service">
           <img src="{% static 'images/math.png' %}" alt="Subject Icon">
           <h3>Math Grade 7 - 12</h3>
-          <p>We offer tutoring in all math subject areas.</p>
+          <p>We offer tutoring in all math subject areas, from basic integers to calculus and trigonometry.</p>
+          <a href="{% url 'subject_detail' 'math' %}"><button class="cta-button contact-btn learn-btn">Learn More</button></a>
       </div>
       <div class="service">
           <img src="{% static 'images/physics.png' %}" alt="Tutors Icon">
           <h3>Physics Grade 11 - 12</h3>
-          <p>We cover university prep level physics.</p>
+          <p>We cover all relevant university prep level physics concepts including modern physics.</p>
+          <a href="{% url 'subject_detail' 'physics' %}"><button class="cta-button contact-btn learn-btn">Learn More</button></a>
       </div>
       <div class="service">
           <img src="{% static 'images/coding.png' %}" alt="Flexible Icon">
           <h3>Coding</h3>
           <p>We cover full stack development and algorithms covered in bootcamps and beyond.</p>
+          <a href="{% url 'subject_detail' 'coding' %}"><button class="cta-button contact-btn learn-btn">Learn More</button></a>
       </div>
     </div>
     <h2>Book a FREE Session</h2>

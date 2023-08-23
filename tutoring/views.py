@@ -7,6 +7,7 @@ import bleach
 import environ
 env = environ.Env()
 environ.Env.read_env()
+from .courses import courses
 
 class MyForm(forms.Form):
     name = forms.CharField(max_length=255)
@@ -60,11 +61,17 @@ def user_logout(request):
     logout(request)
     return redirect('/')
 
+def materials(request):
+    return render(request, 'tutoring/materials.html', { 'user': request.user })
+
 def book_now(request):
     return render(request,  'tutoring/book_now.html', { 'user': request.user })
 
 def tutoring_index(request):
     return render(request, 'tutoring/landing.html', { 'user': request.user })
+
+def subject_detail(request, subject):
+    return render(request, 'tutoring/subject_detail.html', { 'course': courses[subject] })
 
 def tutoring_about(request):
     return render(request, 'tutoring/about.html', { 'user': request.user })

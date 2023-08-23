@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Prep Academy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/services_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materials_style.css' %}">
+</head>
+<body>
+
+  {% include '../partials/header.html' %}
+
+  <section class="services">
+    <h2>Our Course Materials</h2>
+    <div>
+      <div class="service">
+        <div>
+          <img src="{% static 'images/quadratics-made-easy-cover.png' %}" alt="Subject Icon">
+          <img src="{% static 'images/quadratics-made-easy-back.png' %}" alt="Subject Icon">
+        </div>
+          <h3>Quadratics Made Easy <br/> Course Book</h3>
+          <p>Learn the foundations of quadratics and master the hardest unit in Grade 10 and Grade 11 Math. Exam with solutions included inside!</p>
+          <h4>Paperback $19.99</h4>
+          <h4>Digital $9.99</h4>
+          <h5>Sold on Amazon</h5>
+          <a href=""><button class="cta-button contact-btn learn-btn">Buy Now</button></a>
+      </div>
+      <div class="service">
+        <div>
+          <img src="{% static 'images/trigonometry-made-easy-cover.png' %}" alt="Subject Icon">
+          <img src="{% static 'images/quadratics-made-easy-back.png' %}" alt="Subject Icon">
+        </div>
+          <h3>Trigonometry Made Easy <br/> Course Book</h3>
+          <p>Understand the trigonometric laws and SOH CAH TOA on a deeper level. Never struggle again. Exam with solutions included inside!</p>
+          <h4>Paperback $19.99</h4>
+          <h4>Digital $9.99</h4>
+          <h5>Sold on Amazon</h5>
+          <a href=""><button class="cta-button contact-btn learn-btn">Buy Now</button></a>
+      </div>
+    </div>
+  </section>
+
+  {% include '../partials/footer.html' %}
+
+</body>
+</html>
